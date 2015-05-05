@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="java-upwork">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/java-upwork.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
