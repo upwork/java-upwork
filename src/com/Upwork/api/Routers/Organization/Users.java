@@ -59,7 +59,7 @@ public final class Users {
 	 * @return	{@link JSONObject}
      */
     public JSONObject getSpecific(String userReference) throws JSONException {   
-        return oClient.get("/hr/v2/users/me" + userReference);
+        return oClient.get("/hr/v2/users/" + userReference);
     }
 
 }
