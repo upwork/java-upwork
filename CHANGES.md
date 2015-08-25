@@ -1,5 +1,8 @@
 # Release History
 
+## 1.0.2
+* bug fixes
+
 ## 1.0.1
 * Added new Workdays API - Get Workdays by Comppany
 * Added new Workdays API - Get Workdays by Contract

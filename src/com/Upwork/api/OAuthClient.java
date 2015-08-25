@@ -30,7 +30,6 @@ import java.util.Map;
 
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
 import org.json.JSONException;
@@ -286,12 +285,16 @@ public class OAuthClient {
 	                String value = entry.getValue();
 	                // to prevent double encoding, we need to create query string ourself
 	                // uriBuilder.addParameter(key, URLEncoder.encode(value).replace("%3B", ";"));
-	                query = query + key + "=" + value + "&";
+	                query = query + key + "=" + value.replace("&", "&amp;") + "&";
+	                // what the hell is going on in java - no adequate way to encode query string
+	                // lets temporary replace "&" in the value, to encode it manually later
 	            }
+				// this routine will encode query string
 				uriBuilder.setCustomQuery(query);
 				uri = uriBuilder.build();
 				
-				((HttpRequestBase) request).setURI(uri);
+				// re-create request to have validly encoded ampersand
+				request = new HttpGet(fullUrl + "?" + uri.getRawQuery().replace("&amp;", "%26"));
 			} catch (URISyntaxException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
