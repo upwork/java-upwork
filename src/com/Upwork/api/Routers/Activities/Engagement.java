@@ -43,12 +43,12 @@ public final class Engagement {
 		oClient.setEntryPoint(ENTRY_POINT);
 	}
 	
-	/**
+   /**
      * List activities for specific engagement
      *
      * @param   engagement_ref Engagement reference
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getSpecific(String engagement_ref) throws JSONException {
         return oClient.get("/tasks/v2/tasks/contracts/" + engagement_ref);
@@ -62,7 +62,7 @@ public final class Engagement {
      * @param   engagement Engagement
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject assign(String company, String team, String engagement, HashMap<String, String> params) throws JSONException {
         return oClient.put("/otask/v1/tasks/companies/" + company + "/teams/" + team + "/engagements/" + engagement + "/tasks", params);
@@ -74,10 +74,10 @@ public final class Engagement {
      * @param   engagement_ref Engagement reference
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject assignToEngagement(String engagement_ref, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/tasks/v2/tasks/contracts/" + engagement_ref, params);
+        return oClient.put("/tasks/v2/tasks/contracts/" + engagement_ref, params);
     }
 
 }
