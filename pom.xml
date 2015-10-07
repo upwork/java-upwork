@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.Upwork</groupId>
+  <artifactId>api</artifactId>
+  <version>1.0.1</version>
+  <packaging>jar</packaging>
+  <name>java-upwork</name>
+  <description>JAVA bindings for Upwork API</description>
+  <organization>
+  	<name>Upwork</name>
+  	<url>http://www.upwork.com</url>
+  </organization>
+  <url>https://developers.upwork.com/?lang=java</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <issueManagement>
+    <url>https://github.com/upwork/java-upwork/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <scm>
+    <url>https://github.com/upwork/java-upwork.git</url>
+    <connection>scm:git:git@github.com:upwork/java-upwork.git</connection>
+    <developerConnection>scm:git:git@github.com:upwork/java-upwork.git</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <email>apisupport@upwork.com</email>
+      <name>Maksym Novozhylov</name>
+      <url>https://github.com/mnovozhylov</url>
+      <id>apisupport</id>
+    </developer>
+  </developers>
+
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.4.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.json</groupId>
+  		<artifactId>org.json</artifactId>
+  		<version>chargebee-1.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>oauth.signpost</groupId>
+  		<artifactId>signpost-commonshttp4</artifactId>
+  		<version>1.2.1.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>oauth.signpost</groupId>
+  		<artifactId>signpost-core</artifactId>
+  		<version>1.2.1.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpclient</artifactId>
+  		<version>4.5.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.junit.contrib</groupId>
+  		<artifactId>junit-theories</artifactId>
+  		<version>4.11</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.liferay</groupId>
+  		<artifactId>org.powermock.modules.junit4</artifactId>
+  		<version>1.5.6.LIFERAY-PATCHED-1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.mockito</groupId>
+  		<artifactId>mockito-all</artifactId>
+  		<version>1.9.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.powermock</groupId>
+  		<artifactId>powermock-mockito-release-full</artifactId>
+  		<version>1.5.5</version>
+  		<classifier>full</classifier>
+  	</dependency>
+  </dependencies>
+</project>
