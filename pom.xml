@@ -3,7 +3,7 @@
 
   <groupId>com.Upwork</groupId>
   <artifactId>api</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>java-upwork</name>
   <description>JAVA bindings for Upwork API</description>
