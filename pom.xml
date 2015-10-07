@@ -33,12 +33,11 @@
   </scm>
 
   <distributionManagement>
-    <!-- Repository for snapshots -->
-    <repository>
+    <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus snapshot repository</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-    <!-- Repository for releases -->
+    </snapshotRepository>
     <repository>
       <id>nexus-releases</id>
       <name>Nexus Release Repository</name>
