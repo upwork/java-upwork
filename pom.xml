@@ -27,9 +27,9 @@
   </issueManagement>
 
   <scm>
-    <url>https://github.com/upwork/java-upwork.git</url>
-    <connection>scm:git:git@github.com:upwork/java-upwork.git</connection>
-    <developerConnection>scm:git:git@github.com:upwork/java-upwork.git</developerConnection>
+    <connection>scm:git:https://github.com/upwork/java-upwork.git/tags/api-1.0.1</connection>
+    <developerConnection>scm:svn:https://github.com/upwork/java-upwork.git/tags/api-1.0.1</developerConnection>
+    <url>https://github.com/upwork/java-upwork/tags/api-1.0.1</url>
   </scm>
 
   <developers>
@@ -37,7 +37,7 @@
       <email>apisupport@upwork.com</email>
       <name>Maksym Novozhylov</name>
       <url>https://github.com/mnovozhylov</url>
-      <id>apisupport</id>
+      <id>upwork</id>
     </developer>
   </developers>
 
