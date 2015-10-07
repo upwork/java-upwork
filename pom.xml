@@ -27,13 +27,18 @@
   </issueManagement>
 
   <scm>
-    <connection>scm:git:https://github.com/upwork/java-upwork.git</connection>
-    <developerConnection>scm:git:https://github.com/upwork/java-upwork.git</developerConnection>
+    <connection>scm:git:ssh://git@github.com/upwork/java-upwork.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/upwork/java-upwork.git</developerConnection>
     <url>https://github.com/upwork/java-upwork</url>
   </scm>
 
   <distributionManagement>
     <downloadUrl>https://github.com/upwork/java-upwork</downloadUrl>
+    <repository>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
   </distributionManagement>
 
   <developers>
