@@ -32,6 +32,10 @@
     <url>https://github.com/upwork/java-upwork</url>
   </scm>
 
+  <distributionManagement>
+    <downloadUrl>https://github.com/upwork/java-upwork</downloadUrl>
+  </distributionManagement>
+
   <developers>
     <developer>
       <email>apisupport@upwork.com</email>
