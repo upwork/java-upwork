@@ -3,7 +3,7 @@
 
   <groupId>com.Upwork</groupId>
   <artifactId>api</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>java-upwork</name>
   <description>JAVA bindings for Upwork API</description>
@@ -67,7 +67,7 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.3</version>
+        <version>1.6.6</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>sonatype-nexus-staging</serverId>
