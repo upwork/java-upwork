@@ -31,4 +31,11 @@ public class EngagementTest extends Helper {
         
         assertTrue(json instanceof JSONObject);
 	}
+	
+	@Test public void assignToEngagement() throws Exception {
+		Engagement activities = new Engagement(client);
+    	JSONObject json = activities.assignToEngagement("1234", new HashMap<String, String>());
+        
+        assertTrue(json instanceof JSONObject);
+	}
 }
