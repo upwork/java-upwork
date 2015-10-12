@@ -27,6 +27,18 @@ These are the supported API resources:
 * Workd Diary
 * Activities
 
+# Support for Maven and others
+Maven support is available via Maven Central Repository, e.g.
+```
+<dependency>
+    <groupId>com.Upwork</groupId>
+    <artifactId>api</artifactId>
+    <version>1.1.0</version> <!-- update the version, the latest one is recommended -->
+</dependency>
+```
+
+Please, check "Dependency Information" section at [maven page](http://search.maven.org/#artifactdetails%7Ccom.Upwork%7Capi%7C1.0.1%7Cjar) for other systems (like Apache Buildr, Apache Ivy, Gradle, etc)
+
 # License
 
 Copyright 2015 Upwork Corporation. All Rights Reserved.
