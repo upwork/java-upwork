@@ -27,9 +27,11 @@ public class McTest extends Helper {
 	
 	@Test public void getTrayByType() throws Exception {
 		Mc mc = new Mc(client);
-    	JSONObject json = mc.getTrayByType("username", "inbox");
+    	JSONObject json1 = mc.getTrayByType("username", "inbox");
+    	JSONObject json2 = mc.getTrayByType("username", "inbox", new HashMap<String, String>());
         
-        assertTrue(json instanceof JSONObject);
+        assertTrue(json1 instanceof JSONObject);
+        assertTrue(json2 instanceof JSONObject);
 	}
 	
 	@Test public void getThreadDetails() throws Exception {

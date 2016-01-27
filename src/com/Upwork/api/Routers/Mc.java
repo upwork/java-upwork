@@ -48,6 +48,19 @@ public final class Mc {
     public JSONObject getTrayByType(String username, String type) throws JSONException {   
         return oClient.get("/mc/v1/trays/" + username + "/" + type);
     }
+
+    /** 
+     * Get tray by type
+     *
+     * @param   username Username
+     * @param   type Tray type/name
+     * @param   params Parameters
+     * @throws	JSONException If error occurred
+	 * @return	{@link JSONObject}
+     */
+    public JSONObject getTrayByType(String username, String type, HashMap<String, String> params) throws JSONException {   
+        return oClient.get("/mc/v1/trays/" + username + "/" + type, params);
+    }
     
     /**
      * List thread details based on thread id
