@@ -27,15 +27,27 @@ public final class Messages {
 		oClient.setEntryPoint(ENTRY_POINT);
 	}
 	
-	/** 
-     * Retrive rooms information
+    /** 
+     * Retrieve rooms information
      *
      * @param   company Company ID
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getRooms(String company) throws JSONException {
         return oClient.get("/messages/v3/" + company + "/rooms");
+    }
+	
+    /** 
+     * Retrieve rooms information with params
+     *
+     * @param   company Company ID
+     * @param   params Parameters
+     * @throws	JSONException If error occurred
+     * @return	{@link JSONObject}
+     */
+    public JSONObject getRooms(String company, HashMap<String, String> params) throws JSONException {
+        return oClient.get("/messages/v3/" + company + "/rooms", params);
     }
 
     /**
