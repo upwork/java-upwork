@@ -1,6 +1,5 @@
 import com.Upwork.api.*;
 import com.Upwork.api.Routers.Organization.Users;
-import com.Upwork.api.Routers.Mc;
 import com.Upwork.api.Routers.Reports.Time;
 
 import java.util.HashMap;
@@ -82,19 +81,6 @@ public class TestApi {
         	params2.put("tq", "select task where worked_on >= '2014-06-01' AND worked_on <= '2014-06-03' order by worked_on");
         	Time report = new Time(client);
         	json2 = report.getByFreelancerLimited(myId, params2);
-        	
-        	// post a new message
-        	/*HashMap<String, String> params2 = new HashMap<String, String>();
-        	params2.put("recipients", "invalid");
-        	params2.put("body", "body of the message");
-        	Mc mc = new Mc(client);
-        	json2 = mc.startNewThread(myId, params2);*/
-        	
-        	// mark thread as read
-        	HashMap<String, String> params3 = new HashMap<String, String>();
-        	params3.put("read", "true");
-        	Mc mc = new Mc(client);
-        	json3 = mc.markThread(myId, "8888888", params3);
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -102,6 +88,5 @@ public class TestApi {
         
         System.out.println(json1);
         System.out.println(json2);
-        System.out.println(json3);
 	}
 }
