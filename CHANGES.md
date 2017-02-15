@@ -1,5 +1,8 @@
 # Release History
 
+## 1.2.1
+* Applications API has moved from v3 to v4
+
 ## 1.2.0
 * Added Messages API (new)
 * Message API (V1) is now fully depricated
