@@ -28,7 +28,7 @@ import org.json.JSONObject;
 	author = "Maksym Novozhylov <mnovozhilov@upwork.com>",
 	date = "6/4/2014",
 	currentRevision = 1,
-	lastModified = "6/4/2014",
+	lastModified = "2/15/2014",
 	lastModifiedBy = "Maksym Novozhylov",
 	reviewers = {"Yiota Tsakiri"}
 )
@@ -50,7 +50,7 @@ public final class Applications {
      * @return  object
      */
     public JSONObject getList(HashMap<String, String> params) throws JSONException {
-        return oClient.get("/hr/v3/clients/applications", params);
+        return oClient.get("/hr/v4/clients/applications", params);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class Applications {
      * @return  object
      */
     public JSONObject getSpecific(String reference, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/hr/v3/clients/applications/" + reference, params);
+        return oClient.get("/hr/v4/clients/applications/" + reference, params);
     }
 
 }
