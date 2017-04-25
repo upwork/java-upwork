@@ -28,6 +28,8 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
@@ -50,6 +52,9 @@ import oauth.signpost.exception.OAuthException;
 	reviewers = {"Yiota Tsakiri"}
 )
 public class OAuthClient {
+	
+	private static Log logger = LogFactory.getLog(OAuthClient.class);
+	
 	private static final int METHOD_GET     = 1;
     private static final int METHOD_POST    = 2;
     private static final int METHOD_PUT     = 3;
@@ -84,6 +89,9 @@ public class OAuthClient {
 	 * @param	properties Config properties
 	 * */
 	public OAuthClient(Config properties) {
+		
+		logger.info("Initialised OAuthClient.");
+		
 		if (properties == null) {
 			properties = new Config(null);  
 		}
@@ -270,6 +278,7 @@ public class OAuthClient {
 	 * @return	{@link JSONObject} JSON Object that contains data from response
 	 * */
 	private JSONObject sendGetRequest(String url, Integer type, HashMap<String, String> params) throws JSONException {
+		
 		String fullUrl = getFullUrl(url);
 		HttpGet request = new HttpGet(fullUrl);
 		
@@ -278,17 +287,21 @@ public class OAuthClient {
 			String query = "";
 			try {
 				URIBuilder uriBuilder = new URIBuilder(request.getURI());
+				
+				logger.info("Opening URL: "+ fullUrl);
 
 				// encode values and add them to the request
 				for (Map.Entry<String, String> entry : params.entrySet()) {
 	                String key = entry.getKey();
 	                String value = entry.getValue();
+	                logger.info("Parameter: "+ key +"="+ value);
 	                // to prevent double encoding, we need to create query string ourself
 	                // uriBuilder.addParameter(key, URLEncoder.encode(value).replace("%3B", ";"));
 	                query = query + key + "=" + value.replace("&", "&amp;") + "&";
 	                // what the hell is going on in java - no adequate way to encode query string
 	                // lets temporary replace "&" in the value, to encode it manually later
 	            }
+				
 				// this routine will encode query string
 				uriBuilder.setCustomQuery(query);
 				uri = uriBuilder.build();
