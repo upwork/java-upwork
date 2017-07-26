@@ -138,7 +138,7 @@ public final class Messages {
      * @return	{@link JSONObject}
      */
     public JSONObject updateRoomSettings(String company, String roomId, String username, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/messages/v3/" + company + "/rooms/" + roomId + "/users/" + username, params);
+        return oClient.put("/messages/v3/" + company + "/rooms/" + roomId + "/users/" + username, params);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class Messages {
      * @return	{@link JSONObject}
      */
     public JSONObject updateRoomMetadata(String company, String roomId, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/messages/v3/" + company + "/rooms/" + roomId, params);
+        return oClient.put("/messages/v3/" + company + "/rooms/" + roomId, params);
     }
 
 }
