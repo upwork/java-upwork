@@ -1,5 +1,8 @@
 # Release History
 
+## 1.2.2
+* Fix wrong method usage in updateRoomSettings and updateRoomMetadata
+
 ## 1.2.1
 * Applications API has moved from v3 to v4
 
