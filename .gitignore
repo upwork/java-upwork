@@ -1,5 +1,11 @@
+#maven
 target/
+
+#IDEs
 .idea/
 *.iml
 .project
 .classpath
+
+#example build
+example/src/*.class
