@@ -9,6 +9,7 @@ script:
   - ant test
 matrix:
   allow_failures:
+    - jdk: oraclejdk7
     - jdk: openjdk6
   fast_finish: true
 notifications:
