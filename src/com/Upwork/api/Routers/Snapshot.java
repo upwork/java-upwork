@@ -28,7 +28,7 @@ import org.json.JSONObject;
 	author = "Maksym Novozhylov <mnovozhilov@upwork.com>",
 	date = "6/4/2014",
 	currentRevision = 1,
-	lastModified = "6/4/2014",
+	lastModified = "24/5/2014",
 	lastModifiedBy = "Maksym Novozhylov",
 	reviewers = {"Yiota Tsakiri"}
 )
@@ -43,56 +43,16 @@ public final class Snapshot {
 		oClient.setEntryPoint(ENTRY_POINT);
 	}
 	
-	/**
-     * Get snapshot info
-     *
-     * @param   company Company
-     * @param   username Username
-     * @param   ts Timestamp
-     * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
-     */
-    public JSONObject get(String company, String username, String ts) throws JSONException {   
-        return oClient.get("/team/v1/snapshots/" + company + "/" + username + "/" + ts);
-    }   
-
-    /** 
-     * Update snapshot
-     *
-     * @param   company Company
-     * @param   username Username
-     * @param   ts Timestamp
-     * @param   params Parameters
-     * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
-     */
-    public JSONObject update(String company, String username, String ts, HashMap<String, String> params) throws JSONException {   
-        return oClient.put("/team/v1/snapshots/" + company + "/" + username + "/" + ts, params);
-    }
-    
-    /**
-     * Delete snapshot
-     *
-     * @param   company Company
-     * @param   username Username
-     * @param   ts Timestamp
-     * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
-     */
-    public JSONObject delete(String company, String username, String ts) throws JSONException {
-        return oClient.delete("/team/v1/snapshots/" + company + "/" + username + "/" + ts);
-    }
-    
     /**
      * Get snapshot info by specific contract
      *
      * @param   contractId Contract ID
      * @param   ts Timestamp
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getByContract(String contractId, String ts) throws JSONException {   
-        return oClient.get("/team/v2/snapshots/contracts/" + contractId + "/" + ts);
+        return oClient.get("/team/v3/snapshots/contracts/" + contractId + "/" + ts);
     }   
 
     /** 
@@ -102,10 +62,10 @@ public final class Snapshot {
      * @param   ts Timestamp
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject updateByContract(String contractId, String ts, HashMap<String, String> params) throws JSONException {   
-        return oClient.put("/team/v2/snapshots/contracts/" + contractId + "/" + ts, params);
+        return oClient.put("/team/v3/snapshots/contracts/" + contractId + "/" + ts, params);
     }
     
     /**
@@ -114,10 +74,10 @@ public final class Snapshot {
      * @param   contractId Contract ID
      * @param   ts Timestamp
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject deleteByContract(String contractId, String ts) throws JSONException {
-        return oClient.delete("/team/v2/snapshots/contracts/" + contractId + "/" + ts);
+        return oClient.delete("/team/v3/snapshots/contracts/" + contractId + "/" + ts);
     }
 
 }

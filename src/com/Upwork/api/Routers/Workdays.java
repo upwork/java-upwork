@@ -28,7 +28,7 @@ import org.json.JSONObject;
 	author = "Maksym Novozhylov <mnovozhilov@upwork.com>",
 	date = "14/7/2015",
 	currentRevision = 1,
-	lastModified = "14/7/2015",
+	lastModified = "24/5/2018",
 	lastModifiedBy = "Maksym Novozhylov",
 	reviewers = {"Yiota Tsakiri"}
 )
@@ -54,7 +54,7 @@ public final class Workdays {
 	 * @return	{@link JSONObject}
      */
     public JSONObject getByCompany(String company, String fromDate, String tillDate, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/team/v2/workdays/companies/" + company + "/" + fromDate + "," + tillDate, params);
+        return oClient.get("/team/v3/workdays/companies/" + company + "/" + fromDate + "," + tillDate, params);
     }
     
     /**
@@ -68,7 +68,7 @@ public final class Workdays {
 	 * @return	{@link JSONObject}
      */
     public JSONObject getByContract(String contract, String fromDate, String tillDate, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/team/v2/workdays/contracts/" + contract + "/" + fromDate + "," + tillDate, params);
+        return oClient.get("/team/v3/workdays/contracts/" + contract + "/" + fromDate + "," + tillDate, params);
     }
 
 }
