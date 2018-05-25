@@ -20,7 +20,7 @@ import com.Upwork.api.Routers.Workdiary;
 public class WorkdiaryTest extends Helper {
 	@Test public void get() throws Exception {
 		Workdiary workdiary = new Workdiary(client);
-    	JSONObject json = workdiary.get("company", "username", "date", new HashMap<String, String>());
+    	JSONObject json = workdiary.get("company", "date", new HashMap<String, String>());
         
         assertTrue(json instanceof JSONObject);
 	}

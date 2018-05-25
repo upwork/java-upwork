@@ -28,7 +28,7 @@ import org.json.JSONObject;
 	author = "Maksym Novozhylov <mnovozhilov@upwork.com>",
 	date = "6/3/2014",
 	currentRevision = 1,
-	lastModified = "6/3/2014",
+	lastModified = "24/5/2018",
 	lastModifiedBy = "Maksym Novozhylov",
 	reviewers = {"Yiota Tsakiri"}
 )
@@ -47,14 +47,13 @@ public final class Workdiary {
      * Get Workdiary
      *
      * @param   company Company ID
-     * @param   username User ID
      * @param   date Date
      * @param   params (Optional) Parameters
      * @throws	JSONException If error occurred
 	 * @return	{@link JSONObject}
      */
-    public JSONObject get(String company, String username, String date, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/team/v1/workdiaries/" + company + "/" + username + "/" + date, params);
+    public JSONObject get(String company, String date, HashMap<String, String> params) throws JSONException {
+        return oClient.get("/team/v3/workdiaries/companies/" + company + "/" + date, params);
     }
     
     /**
@@ -67,7 +66,7 @@ public final class Workdiary {
 	 * @return	{@link JSONObject}
      */
     public JSONObject getByContract(String contract, String date, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/team/v2/workdiaries/contracts/" + contract + "/" + date, params);
+        return oClient.get("/team/v3/workdiaries/contracts/" + contract + "/" + date, params);
     }
 
 }
