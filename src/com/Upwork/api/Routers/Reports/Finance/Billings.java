@@ -43,40 +43,16 @@ public final class Billings {
 		oClient.setEntryPoint(ENTRY_POINT);
 	}
 	
-	/**
+    /**
      * Generate Billing Reports for a Specific Freelancer
      *
      * @param   freelancerReference Freelancer's reference
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getByFreelancer(String freelancerReference, HashMap<String, String> params) throws JSONException {
         return oClient.get("/finreports/v2/providers/" + freelancerReference + "/billings", params);
-    }
-
-    /**
-     * Generate Billing Reports for a Specific Freelancer's Team
-     *
-     * @param   freelancerTeamReference Freelancer's team reference
-     * @param   params Parameters
-     * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
-     */
-    public JSONObject getByFreelancersTeam(String freelancerTeamReference, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/finreports/v2/provider_teams/" + freelancerTeamReference + "/billings", params);
-    }
-    
-    /**
-     * Generate Billing Reports for a Specific Freelancer's Company
-     *
-     * @param   freelancerCompanyReference Freelancer's company reference
-     * @param   params Parameters
-     * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
-     */
-    public JSONObject getByFreelancersCompany(String freelancerCompanyReference, HashMap<String, String> params) throws JSONException {
-        return oClient.get("/finreports/v2/provider_companies/" + freelancerCompanyReference + "/billings", params);
     }
 
     /**
@@ -85,7 +61,7 @@ public final class Billings {
      * @param   buyerTeamReference Buyer team reference
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getByBuyersTeam(String buyerTeamReference, HashMap<String, String> params) throws JSONException {
         return oClient.get("/finreports/v2/buyer_teams/" + buyerTeamReference + "/billings", params);
@@ -97,7 +73,7 @@ public final class Billings {
      * @param   buyerCompanyReference Buyer company reference
      * @param   params Parameters
      * @throws	JSONException If error occurred
-	 * @return	{@link JSONObject}
+     * @return	{@link JSONObject}
      */
     public JSONObject getByBuyersCompany(String buyerCompanyReference, HashMap<String, String> params) throws JSONException {
         return oClient.get("/finreports/v2/buyer_companies/" + buyerCompanyReference + "/billings", params);

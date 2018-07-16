@@ -18,13 +18,6 @@ import com.Upwork.api.Routers.Reports.Finance.Accounts;
 	Accounts.class
 })
 public class AccountsTest extends Helper {
-	@Test public void getOwned() throws Exception {
-		Accounts accounts = new Accounts(client);
-    	JSONObject json = accounts.getOwned("1234", new HashMap<String, String>());
-        
-        assertTrue(json instanceof JSONObject);
-	}
-	
 	@Test public void getSpecific() throws Exception {
 		Accounts accounts = new Accounts(client);
     	JSONObject json = accounts.getSpecific("1234", new HashMap<String, String>());

@@ -25,20 +25,6 @@ public class BillingsTest extends Helper {
         assertTrue(json instanceof JSONObject);
 	}
 	
-	@Test public void getByFreelancersTeam() throws Exception {
-		Billings billings = new Billings(client);
-    	JSONObject json = billings.getByFreelancersTeam("1234", new HashMap<String, String>());
-        
-        assertTrue(json instanceof JSONObject);
-	}
-	
-	@Test public void getByFreelancersCompany() throws Exception {
-		Billings billings = new Billings(client);
-    	JSONObject json = billings.getByFreelancersCompany("1234", new HashMap<String, String>());
-        
-        assertTrue(json instanceof JSONObject);
-	}
-	
 	@Test public void getByBuyersTeam() throws Exception {
 		Billings billings = new Billings(client);
     	JSONObject json = billings.getByBuyersTeam("1234", new HashMap<String, String>());
