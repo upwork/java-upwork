@@ -1,14 +1,11 @@
 language: java
 install: mvn install -DskipTests=true -Dgpg.skip=true
 jdk:
-  - oraclejdk9
-  - openjdk11
+  - openjdk8
+before_script:
+   - sudo apt install ant-optional
 script:
   - ant test
-matrix:
-  allow_failures:
-    - jdk: openjdk8
-  fast_finish: true
 notifications:
   email:
     recipients:
