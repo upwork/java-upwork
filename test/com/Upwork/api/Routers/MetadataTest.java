@@ -39,6 +39,20 @@ public class MetadataTest extends Helper {
         assertTrue(json instanceof JSONObject);
 	}
 	
+	@Test public void getSkillsV2() throws Exception {
+		Metadata metadata = new Metadata(client);
+	JSONObject json = metadata.getSkillsV2();
+
+        assertTrue(json instanceof JSONObject);
+	}
+
+	@Test public void getSpecialties() throws Exception {
+		Metadata metadata = new Metadata(client);
+	JSONObject json = metadata.getSpecialties();
+
+        assertTrue(json instanceof JSONObject);
+	}
+
 	@Test public void getRegions() throws Exception {
 		Metadata metadata = new Metadata(client);
     	JSONObject json = metadata.getRegions();
