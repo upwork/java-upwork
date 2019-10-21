@@ -72,6 +72,26 @@ public final class Metadata {
     public JSONObject getSkills() throws JSONException {   
         return oClient.get("/profiles/v1/metadata/skills");
     }
+
+    /**
+     * Get Skills V2
+     *
+     * @throws	JSONException If error occurred
+	 * @return	{@link JSONObject}
+     */
+    public JSONObject getSkillsV2() throws JSONException {
+        return oClient.get("/profiles/v2/metadata/skills");
+    }
+
+    /**
+     * Get Specialties
+     *
+     * @throws	JSONException If error occurred
+	 * @return	{@link JSONObject}
+     */
+    public JSONObject getSpecialties() throws JSONException {
+        return oClient.get("/profiles/v1/metadata/specialties");
+    }
     
     /** 
      * Get regions
