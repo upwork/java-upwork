@@ -64,6 +64,19 @@ public final class Messages {
     }
 
     /**
+     * Get messages from a specific room
+     *
+     * @param   company Company ID
+     * @param   roomId  Room ID
+     * @param   params Parameters
+     * @throws	JSONException If error occurred
+     * @return	{@link JSONObject}
+     */
+    public JSONObject getRoomMessages(String company, String roomId, HashMap<String, String> params) throws JSONException {
+        return oClient.get("/messages/v3/" + company + "/rooms/" + roomId + "/stories", params);
+    }
+
+    /**
      * Get a specific room by offer ID
      *
      * @param   company Company ID
