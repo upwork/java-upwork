@@ -1,7 +1,7 @@
-JAVA bindings for Upwork API
+JAVA bindings for Upwork API (OAuth1)
 ============
 
-[![License](http://img.shields.io/packagist/l/upwork/php-upwork.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![License](https://img.shields.io/github/license/upwork/java-upwork)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![GitHub release](https://img.shields.io/github/release/upwork/java-upwork.svg)](https://github.com/upwork/java-upwork/releases)
 [![Build Status](https://travis-ci.org/upwork/java-upwork.svg?branch=master)](https://travis-ci.org/upwork/java-upwork)
 [![Stories in Ready](http://badge.waffle.io/upwork/java-upwork.png)](http://waffle.io/upwork/java-upwork)
