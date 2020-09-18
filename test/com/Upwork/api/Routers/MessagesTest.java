@@ -78,6 +78,13 @@ public class MessagesTest extends Helper {
         assertTrue(json instanceof JSONObject);
 	}
 	
+	@Test public void sendMessageToRooms() throws Exception {
+		Messages messages = new Messages(client);
+	JSONObject json = messages.sendMessageToRooms("company", new HashMap<String, String>());
+
+        assertTrue(json instanceof JSONObject);
+	}
+
 	@Test public void updateRoomSettings() throws Exception {
 		Messages messages = new Messages(client);
     	JSONObject json = messages.updateRoomSettings("company", "room-id", "username", new HashMap<String, String>());
