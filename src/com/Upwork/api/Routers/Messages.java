@@ -141,6 +141,18 @@ public final class Messages {
     }
 
     /**
+     * Send a message to a batch of rooms
+     *
+     * @param   company Company ID
+     * @param   params Parameters
+     * @throws	JSONException If error occurred
+     * @return	{@link JSONObject}
+     */
+    public JSONObject sendMessageToRooms(String company, HashMap<String, String> params) throws JSONException {
+        return oClient.post("/messages/v3/" + company + "/stories/batch", params);
+    }
+
+    /**
      * Update a room settings
      *
      * @param   company Company ID

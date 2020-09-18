@@ -1,5 +1,11 @@
 # Release History
 
+## 1.3.3
+* Send Message to a Batch of Rooms API
+
+## 1.3.2
+* Add Room Messages API
+
 ## 1.3.1
 * Add Specialties API
 * Add Skills V2 API
