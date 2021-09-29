@@ -1,7 +1,7 @@
 language: java
 install: mvn install -DskipTests=true -Dgpg.skip=true
 jdk:
-  - openjdk8
+  - openjdk11
 before_script:
    - sudo apt install ant-optional
 script:
