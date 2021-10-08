@@ -3,8 +3,7 @@ JAVA bindings for Upwork API (OAuth1)
 
 [![License](https://img.shields.io/github/license/upwork/java-upwork)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![GitHub release](https://img.shields.io/github/release/upwork/java-upwork.svg)](https://github.com/upwork/java-upwork/releases)
-[![Build Status](https://travis-ci.org/upwork/java-upwork.svg?branch=master)](https://travis-ci.org/upwork/java-upwork)
-[![Stories in Ready](http://badge.waffle.io/upwork/java-upwork.png)](http://waffle.io/upwork/java-upwork)
+[![Build Status](https://github.com/upwork/java-upwork/workflows/build/badge.svg)](https://github.com/upwork/java-upwork/actions)
 
 # Introduction
 This project provides a set of resources of Upwork API from http://developers.upwork.com
